@@ -23,12 +23,6 @@ public class IntroToProgrammingCourse extends Course {
         this.credits = credits;
     }
     
-    //not sure if this should be in superclass or subclass
-    //public double getCredits() {
-    //    return credits;
-    //}
-    
-    //not sure if this is done correctly seeing as it's not forcing me to override the superclass method
     //method that will set credits for the course
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {

@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 
-package lab1;
+package lab2;
 
 /**
  *
- * @author owner
+ * @author jkramer26
  */
-public class StartupClass_Lab1 {
+public class StartupClass_Lab2 {
     public static void main(String[] args) {
         
         //Instantiate an IntroToProgrammingCourse object

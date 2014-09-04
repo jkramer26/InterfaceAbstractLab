@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * It's advantageous to use the Liskov princple when you have lots of different superclasses
+ * and need to identify what subclasses belong to which superclasses
+ * 
+ * It's not really useful if you have just one superclass. It also seems to not work if 
+ * you have subclass that is extended
  */
 
 package lab1;
@@ -44,10 +46,6 @@ public abstract class Course {
     //and if set is the abstract method should get remain in superclass?
     public abstract double getCredits();
     
-    //change this to an abstract method and then allow subclasses to handle setting credits
-    //why doesn't this have to be there
-    //public abstract void setCredits(double credits);
-    
 
     public String getCourseName() {
         return courseName;
@@ -63,8 +61,5 @@ public abstract class Course {
         this.courseName = courseName;
     }
 
-    void getPrequisites() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }
