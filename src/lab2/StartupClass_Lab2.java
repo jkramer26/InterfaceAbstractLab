@@ -18,15 +18,22 @@ public class StartupClass_Lab2 {
                             + "\nCredits for Course: " + programmingIntro.getCredits());
         
         //Instantiate an IntrotoJavaCourse object
-        //If I change the type it won't grab prereqs...no idea why
+        //If I change the type it won't grab prereqs...no idea why - because the course object doesn't
+        //have the prereq method. 
         //If I pass in a value does it get validated? - you have to call method in constructor to validate passed 
         //input right away
-        IntroJavaCourse javaIntro = new IntroJavaCourse("Intro to Java", "P-224", 4, "Intro to Programming");
+        
+        //Course below should actually be IntroJavaCourse for reasons listed below
+        Course javaIntro = new IntroJavaCourse("Intro to Java", "P-224", 4, "Intro to Programming");
         
         System.out.println("\n\nCourse Name: " + javaIntro.getCourseName()
                             + "\nCourse Number:" + javaIntro.getCourseNumber()
                             + "\nCredits for Course: " + javaIntro.getCredits()
-                            + "\nCourse Prereqs: " +javaIntro.getPrerequisites());
+                            //this is rigid and not recommended. It is better to just state that the 
+                            //IntroJavaCourse is an object of itself because it makes the code more flexible
+                            //When you can use the Liskov princple, then use it but otherwise don't use it 
+                            //at the expense of flexibility in the program
+                            + "\nCourse Prereqs: " + ((IntroJavaCourse)javaIntro).getPrerequisites());
         
         //Instantiate and AdvancedJavaCourse object
         AdvancedJavaCourse advancedJava = new AdvancedJavaCourse("Advanced Java", "P-448", 4, "Intro to Java");

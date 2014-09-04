@@ -14,6 +14,10 @@ public class IntroToProgrammingCourse implements Course {
     private double credits;
 
     //constructor 
+    //validate input by calling method in constructor. Make method final to prevent 
+    //the method from being overidden. 
+    //Does method being overriden in subclass affect superclass? - look at inheritancedangers program
+    //Overriding may cause other code to act improperly
     public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
         this.courseName = courseName;
         this.courseNumber = courseNumber;
