@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package lab2;
 
@@ -23,7 +19,8 @@ public class StartupClass_Lab2 {
         
         //Instantiate an IntrotoJavaCourse object
         //If I change the type it won't grab prereqs...no idea why
-        //If I pass in a value does it get validated?
+        //If I pass in a value does it get validated? - you have to call method in constructor to validate passed 
+        //input right away
         IntroJavaCourse javaIntro = new IntroJavaCourse("Intro to Java", "P-224", 4, "Intro to Programming");
         
         System.out.println("\n\nCourse Name: " + javaIntro.getCourseName()

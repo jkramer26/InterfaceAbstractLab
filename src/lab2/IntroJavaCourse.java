@@ -16,19 +16,23 @@ public class IntroJavaCourse implements Course {
 
     //constructor 
     public IntroJavaCourse(String courseName, String courseNumber, double credits, String prerequisites) {
-        this.courseName = courseName;
+        //call method right away to make sure input is validated
+        this.setCourseName(courseName);
         this.courseNumber = courseNumber;
         this.credits = credits;
         this.prerequisites = prerequisites;
     }
     
-    //not prompting me to override?
+    //not prompting me to override? - but should make sure to annotate anyway cause it is best practices
     //get course name
+    @Override
     public String getCourseName() {
         return courseName;
     }
     //set course name
-    public void setCourseName(String courseName) {
+    //use final so method can't be changed by subclass. Subclass can still use this method, just can't change.
+    @Override
+    public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
                     "Error: courseName cannot be null of empty string");
@@ -39,10 +43,12 @@ public class IntroJavaCourse implements Course {
     
     
     //gets course number
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
     //sets course number
+    @Override
     public void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -55,10 +61,12 @@ public class IntroJavaCourse implements Course {
     
     
     //gets course credits
+    @Override
     public double getCredits() {
         return credits;
     }
     //sets course credits
+    @Override
     public void setCredits(double credits) {
         this.credits = credits;
     }

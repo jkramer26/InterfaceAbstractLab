@@ -22,10 +22,12 @@ public class IntroToProgrammingCourse implements Course {
     
     
     //method that gets the course name
+    @Override
     public String getCourseName() {
         return courseName;
     }
     //set course name
+    @Override
     public void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -37,10 +39,12 @@ public class IntroToProgrammingCourse implements Course {
     
     
     //method that gets the course number
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
     //set course numbers
+    @Override
     public void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0) {
             JOptionPane.showMessageDialog(null,
@@ -52,10 +56,12 @@ public class IntroToProgrammingCourse implements Course {
  
     
     //gets the number of credits for the course
+    @Override
     public double getCredits() {
         return credits;
     }
     //set credits
+    @Override
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
