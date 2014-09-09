@@ -24,15 +24,16 @@ public class StartupClass_Lab2 {
         //input right away
         
         //Course below should actually be IntroJavaCourse for reasons listed below
+        //Refer to class lesson plan 4 for more info on the Liskov princple
         Course javaIntro = new IntroJavaCourse("Intro to Java", "P-224", 4, "Intro to Programming");
         
         System.out.println("\n\nCourse Name: " + javaIntro.getCourseName()
                             + "\nCourse Number:" + javaIntro.getCourseNumber()
                             + "\nCredits for Course: " + javaIntro.getCredits()
                             //this is rigid and not recommended. It is better to just state that the 
-                            //IntroJavaCourse is an object of itself because it makes the code more flexible
+                            //IntroJavaCourse is an object of itself because it makes the code better
                             //When you can use the Liskov princple, then use it but otherwise don't use it 
-                            //at the expense of flexibility in the program
+                            //at the expense of more flexibility in the program
                             + "\nCourse Prereqs: " + ((IntroJavaCourse)javaIntro).getPrerequisites());
         
         //Instantiate and AdvancedJavaCourse object
