@@ -15,28 +15,10 @@ import javax.swing.JOptionPane;
 
  
 public class IntroToProgrammingCourse extends Course {
-    private double credits;
-    
+  
     //constructor that sets course name
     public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
-        super(courseName, courseNumber);
-        this.credits = credits;
+        super(courseName, courseNumber, credits);
     }
-    
-    //method that will set credits for the course
-    public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
-        }
-        this.credits = credits;
-    }
-
-    public double getCredits() {
-        return credits;
-    }
-    
-    
     
 }

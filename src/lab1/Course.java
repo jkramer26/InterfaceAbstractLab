@@ -22,9 +22,11 @@ public abstract class Course {
     private double credits;
     
     //constructor that sets course name and course number which all courses will have
-    public Course(String courseName, String courseNumber) {
+    //might want to consider only putting constructors in subclasses
+    public Course(String courseName, String courseNumber, double credits) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
     
     public String getCourseNumber() {
@@ -42,11 +44,23 @@ public abstract class Course {
         this.courseNumber = courseNumber;
     }
     
-    //should set or get be the abstract method
-    //and if set is the abstract method should get remain in superclass?
-    public abstract double getCredits();
     
-
+    //setters and getters should be in superclass
+    public double getCredits() {
+        return credits;
+    }
+    
+    //put setCredits in here
+    public void setCredits(double credits) {
+        if(credits < 0.5 || credits > 4.0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: credits must be in the range 0.5 to 4.0");
+            System.exit(0);
+        }
+        this.credits = credits;
+    }
+    
+    
     public String getCourseName() {
         return courseName;
     }
